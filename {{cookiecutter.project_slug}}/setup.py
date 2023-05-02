@@ -89,7 +89,7 @@ setup(
     description="{{ cookiecutter.project_short_description }}",
     entry_points={
         'console_scripts': [
-            '{{ cookiecutter.project_slug }}={{ cookiecutter.project_slug }}.cli:main',
+            '{{ cookiecutter.project_slug }}=bin.{{ cookiecutter.project_slug }}:main',
         ],
     },
     install_requires=requirements,
