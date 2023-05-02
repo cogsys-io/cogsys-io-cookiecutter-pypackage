@@ -5,7 +5,6 @@
 import pytest
 
 from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
-from {{ cookiecutter.project_slug }} import cli
 
 
 @pytest.fixture
