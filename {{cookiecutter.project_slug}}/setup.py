@@ -57,7 +57,9 @@ setup(
     include_package_data=True,
     keywords='{{ cookiecutter.project_slug }}',
     name='{{ cookiecutter.project_slug }}',
-    packages=find_packages(include=['{{ cookiecutter.project_slug }}', '{{ cookiecutter.project_slug }}.*']),
+    packages=find_packages(
+        include=['{{ cookiecutter.project_slug }}', '{{ cookiecutter.project_slug }}.*']),
+        exclude=["tests", "*.tests", "*.tests.*"],
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}',
