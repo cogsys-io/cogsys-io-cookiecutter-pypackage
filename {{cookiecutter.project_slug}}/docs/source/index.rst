@@ -8,7 +8,7 @@
    readme
    installation
    usage
-   modules
+   Package modules <modules>
    contributing
    {% if cookiecutter.create_author_file == 'y' -%}authors
    {% endif -%}history
