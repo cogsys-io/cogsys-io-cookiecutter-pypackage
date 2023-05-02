@@ -60,9 +60,11 @@ author = "{{ cookiecutter.full_name }}"
 # The version info for the project you're documenting, acts as replacement
 # for |version| and |release|, also used in various other places throughout
 # the built documents.
-#
+
 # The short X.Y version.
-version = {{ cookiecutter.project_slug }}.__version__
+# version = {{ cookiecutter.project_slug }}.__version__
+version = ".".join({{ cookiecutter.project_slug }}.__version__.split(".")[:2])
+
 # The full version, including alpha/beta/rc tags.
 release = {{ cookiecutter.project_slug }}.__version__
 
