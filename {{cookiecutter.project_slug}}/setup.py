@@ -13,6 +13,7 @@ with open('HISTORY.rst') as history_file:
 
 setup_requirements = [
     "pytest-runner>=5.2",
+    "build>=0.10.0",
 ]
 
 test_requirements = [

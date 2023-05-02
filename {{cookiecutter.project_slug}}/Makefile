@@ -59,7 +59,7 @@ lint/black: ## check style with black
 lint: lint/flake8{%- if cookiecutter.use_black == 'y' %} lint/black{%- endif %} ## check style
 
 test: ## run tests quickly with the default Python
-	pytest
+	pytest -W "ignore::DeprecationWarning" -v
 
 test-all: ## run tests on every Python version with tox
 	tox
@@ -81,13 +81,29 @@ docs: ## generate Sphinx HTML documentation, including API docs
 servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
 
+check: dist ## check package (twine)
+	twine check dist/*
+
 release: dist ## package and upload a release
 	twine upload dist/*
 
+release-to-testpypi: dist ## package and upload a release to testpypi
+	twine upload -r testpypi dist/*
+
 dist: clean ## builds source and wheel package
-	python setup.py sdist
-	python setup.py bdist_wheel
+#	python setup.py sdist
+#	python setup.py bdist_wheel
+	python -m build
 	ls -l dist
 
 install: clean ## install the package to the active Python's site-packages
-	python setup.py install
+#	python setup.py install
+	pip install .
+
+install-editable: clean ## install the package in editable mode
+	pip install --editable .
+
+version: ## display git versioning tags and the actual current version from versioneer
+	@git tag | grep "{{ cookiecutter.project_slug }}-v" | sed -e "s|{{ cookiecutter.project_slug }}-v||g"
+	@echo "----------------"
+	@python -c "import {{ cookiecutter.project_slug }}; print({{ cookiecutter.project_slug }}.__version__+' [← current]')"
