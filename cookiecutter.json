@@ -2,7 +2,7 @@
   "full_name": "cogsys.io",
   "email": "cogsys@cogsys.io",
   "github_username": "cogsys-io",
-  "project_name": "Python Boilerplate Project",
+  "project_name": "Boilerplate",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "repo_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
   "project_short_description": "Python Boilerplate Project contains all the boilerplate you need to create a Python package.",
