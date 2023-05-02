@@ -4,14 +4,13 @@
 Console Script Setup
 =================
 
-Optionally, your package can include a console script using Click or argparse (Python 3.2+).
+Optionally, your package can include a console script using argparse (Python 3.2+).
 
 How It Works
 ------------
 
-If the 'command_line_interface' option is set to ['click'] or ['argparse'] during setup, cookiecutter will
-add a file 'cli.py' in the project_slug subdirectory. An entry point is added to
-setup.py that points to the main function in cli.py.
+Cookiecutter will add a file 'cli.py' in the project_slug subdirectory and an entry
+point is added to setup.py that points to the main function in cli.py.
 
 Usage
 ------------
@@ -30,25 +29,4 @@ The script will be generated with output for no arguments and --help.
 
 Known Issues
 ------------
-Using Click, installing the project in a development environment using:
-
-.. code-block:: bash
-
-    python setup.py develop
-
-will not set up the entry point correctly. This is a known issue with Click.
-The following will work as expected:
-
-.. code-block:: bash
-
-    python setup.py install
-    pip install mypackage
-
-With 'mypackage' adjusted to the specific project.
-
-
-More Details
-------------
-
-You can read more about Click at:
-http://click.pocoo.org/
+None yet, expecting some.
