@@ -16,7 +16,7 @@ requirements = [
 ]
 
 test_requirements = [
-    {%- if cookiecutter.use_pytest == 'y' %}"pytest>=3",{%- endif %}
+    "pytest>=3",
 ]
 
 {%- set license_classifiers = {
