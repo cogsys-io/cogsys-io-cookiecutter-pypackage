@@ -11,12 +11,55 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [
+setup_requirements = [
+    "pytest-runner>=5.2",
 ]
 
 test_requirements = [
-    "pytest>=3",
+    {% if cookiecutter.use_black == 'y' -%}"black==23.3.0",{% endif %}
+    "codecov==2.1.13",
+    "flake8==6.0.0",
+    "flake8-debugger==4.1.2",
+    "pytest==5.4.3",
+    "pytest-cov==4.0.0",
+    "pytest-raises==0.11",
 ]
+
+dev_requirements = [
+    *setup_requirements,
+    *test_requirements,
+    "versioneer>=0.28",
+    "coverage>=5.1",
+    "ipython>=7.15.0",
+    "m2r2>=0.2.7",
+    "sphinx>=5.3.0",
+    "sphinx_rtd_theme>=1.2.0",
+    "tox>=3.15.2",
+    "twine>=3.1.1",
+    "wheel>=0.34.2",
+]
+
+requirements = [
+    "GitPython>=3.1.31",
+    "blessed>=1.20.0",
+    "srsly>=2.4.0",
+    "pandas>=1.4.0",
+    "pytz>=2022.1",
+    "tzlocal>=4.2",
+    "humanfriendly>=10.0",
+    "contexttimer>=0.3.3",
+]
+
+extra_requirements = {
+    "setup": setup_requirements,
+    "test": test_requirements,
+    "dev": dev_requirements,
+    "all": [
+        *requirements,
+        *dev_requirements,
+    ]
+}
+
 
 {%- set license_classifiers = {
     'GNU General Public License v3': 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
@@ -50,6 +93,7 @@ setup(
         ],
     },
     install_requires=requirements,
+    setup_requires=setup_requirements,
 {%- if cookiecutter.open_source_license in license_classifiers %}
     license="{{ cookiecutter.open_source_license }}",
 {%- endif %}
@@ -63,6 +107,7 @@ setup(
         exclude=["tests", "*.tests", "*.tests.*"],
     test_suite='tests',
     tests_require=test_requirements,
+    extras_require=extra_requirements,
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
