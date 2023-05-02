@@ -13,12 +13,14 @@ export BROWSER_PYSCRIPT
 
 define PRINT_HELP_PYSCRIPT
 import re, sys
+from blessed import Terminal
+term = Terminal()
 
 for line in sys.stdin:
 	match = re.match(r'^([a-zA-Z_-]+):.*?## (.*)$$', line)
 	if match:
 		target, help = match.groups()
-		print("%-20s %s" % (target, help))
+		print(f"{term.bold_bright_blue}{target:20s}{term.normal} {help}")
 endef
 export PRINT_HELP_PYSCRIPT
 
