@@ -1,9 +1,9 @@
-======================
-Cookiecutter PyPackage
-======================
+================================
+cogsys.io Cookiecutter PyPackage
+================================
 
-.. image:: https://pyup.io/repos/github/audreyfeldroy/cookiecutter-pypackage/shield.svg
-    :target: https://pyup.io/repos/github/audreyfeldroy/cookiecutter-pypackage/
+.. image:: https://pyup.io/repos/github/cogsys-io/cogsys-io-cookiecutter-pypackage/shield.svg
+    :target: https://pyup.io/repos/github/cogsys-io/cogsys-io-cookiecutter-pypackage/
     :alt: Updates
 
 .. image:: https://travis-ci.org/audreyfeldroy/cookiecutter-pypackage.svg?branch=master
@@ -14,23 +14,35 @@ Cookiecutter PyPackage
     :target: https://cookiecutter-pypackage.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
-Cookiecutter_ template for a Python package.
 
-* GitHub repo: https://github.com/audreyfeldroy/cookiecutter-pypackage/
-* Documentation: https://cookiecutter-pypackage.readthedocs.io/
+``cogsys-io-cookiecutter-pypackage`` is a Cookiecutter_ Python
+package template. It is strongly based on the `audreyr/cookiecutter-pypackage`_ and
+also strongly opinionated and customized by `cogsys.io`_.
+
+
+* GitHub repo: https://github.com/cogsys-io/cogsys-io-cookiecutter-pypackage/
+* Documentation: https://cogsys-io-cookiecutter-pypackage.readthedocs.io/
 * Free software: BSD license
+
+Warning
+-------
+
+Heads up: this project is currently under ongoing development, so you might
+come across some rough spots here and there.
 
 Features
 --------
 
-* Testing setup with ``unittest`` and ``python setup.py test`` or ``pytest``
+* Testing setup with ``pytest``
 * Travis-CI_: Ready for Travis Continuous Integration testing
-* Tox_ testing: Setup to easily test for Python 3.6, 3.7, 3.8
+* Tox_ testing: Setup to easily test for Python 3.8, 3.9, 3.10
 * Sphinx_ docs: Documentation ready for generation with, for example, `Read the Docs`_
-* bump2version_: Pre-configured version bumping with a single command
-* Auto-release to PyPI_ when you push a new tag to master (optional)
+* versioneer_: Automated versions based on git tags
 
+.. _`cogsys.io`: https://cogsys.io
+.. _cogsys-io-cookiecutter-pypackage: https://github.com/cogsys-io/cogsys-io-cookiecutter-pypackage/
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 
 Build Status
 -------------
@@ -41,11 +53,6 @@ Linux:
     :target: https://travis-ci.org/audreyfeldroy/cookiecutter-pypackage
     :alt: Linux build status on Travis CI
 
-Windows:
-
-.. image:: https://ci.appveyor.com/api/projects/status/github/audreyr/cookiecutter-pypackage?branch=master&svg=true
-    :target: https://ci.appveyor.com/project/audreyr/cookiecutter-pypackage/branch/master
-    :alt: Windows build status on Appveyor
 
 Quickstart
 ----------
@@ -57,7 +64,7 @@ Cookiecutter 1.4.0 or higher)::
 
 Generate a Python package project::
 
-    cookiecutter https://github.com/audreyfeldroy/cookiecutter-pypackage.git
+    cookiecutter https://github.com/cogsys-io/cogsys-io-cookiecutter-pypackage.git
 
 Then:
 
@@ -88,6 +95,9 @@ Don't worry, you have options:
 Similar Cookiecutter Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+* `audreyr/cookiecutter-pypackage`_: The original Cookiecutter_ PyPackage that
+  this project is based on.
+
 * `Nekroze/cookiecutter-pypackage`_: A fork of this with a PyTest test runner,
   strict flake8 checking with Travis/Tox, and some docs and ``setup.py`` differences.
 
@@ -98,7 +108,7 @@ Similar Cookiecutter Templates
 
 * `ardydedase/cookiecutter-pypackage`_: A fork with separate requirements files rather than a requirements list in the ``setup.py`` file.
 
-* `lgiordani/cookiecutter-pypackage`_: A fork of Cookiecutter that uses Punch_ instead of bump2version_ and with separate requirements files.
+* `lgiordani/cookiecutter-pypackage`_: A fork of Cookiecutter that uses Punch_ instead of versioneer_ and with separate requirements files.
 
 * `briggySmalls/cookiecutter-pypackage`_: A fork using Poetry_ for neat package management and deployment, with linting, formatting, no makefiles and more.
 
@@ -136,7 +146,7 @@ make my own packaging experience better.
 .. _Sphinx: http://sphinx-doc.org/
 .. _Read the Docs: https://readthedocs.io/
 .. _`pyup.io`: https://pyup.io/
-.. _bump2version: https://github.com/c4urself/bump2version
+.. _versioneer: https://github.com/python-versioneer/python-versioneer
 .. _Punch: https://github.com/lgiordani/punch
 .. _Poetry: https://python-poetry.org/
 .. _PyPi: https://pypi.python.org/pypi

@@ -2,7 +2,7 @@
 
 
 Console Script Setup
-=================
+====================
 
 Optionally, your package can include a console script using argparse (Python 3.2+).
 
@@ -13,7 +13,7 @@ Cookiecutter will add a file 'cli.py' in the project_slug subdirectory and an en
 point is added to setup.py that points to the main function in cli.py.
 
 Usage
-------------
+-----
 To use the console script in development:
 
 .. code-block:: bash

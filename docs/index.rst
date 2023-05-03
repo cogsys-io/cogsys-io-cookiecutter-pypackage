@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to cookiecutter-pypackage's documentation!
-==================================================
+Welcome to cogsys-io-cookiecutter-pypackage's documentation!
+============================================================
 
 Getting Started
 ---------------
@@ -23,6 +23,7 @@ Basics
    :maxdepth: 2
 
    prompts
+   troubleshooting
 
 Advanced Features
 -----------------
