@@ -104,8 +104,9 @@ setup(
     keywords='{{ cookiecutter.project_slug }}',
     name='{{ cookiecutter.project_slug }}',
     packages=find_packages(
-        include=['{{ cookiecutter.project_slug }}', '{{ cookiecutter.project_slug }}.*']),
+        include=["{{ cookiecutter.project_slug }}", "{{ cookiecutter.project_slug }}.*"],
         exclude=["tests", "*.tests", "*.tests.*"],
+    ),
     test_suite='tests',
     tests_require=test_requirements,
     extras_require=extra_requirements,
