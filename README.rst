@@ -10,8 +10,8 @@ cogsys.io Cookiecutter PyPackage
     :target: https://travis-ci.org/github/audreyfeldroy/cookiecutter-pypackage
     :alt: Build Status
 
-.. image:: https://readthedocs.org/projects/cookiecutter-pypackage/badge/?version=latest
-    :target: https://cookiecutter-pypackage.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/cogsys-io-cookiecutter-pypackage/badge/?version=latest
+    :target: https://cogsys-io-cookiecutter-pypackage.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
 
