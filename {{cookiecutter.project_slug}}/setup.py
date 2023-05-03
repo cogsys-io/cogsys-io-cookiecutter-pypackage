@@ -2,7 +2,7 @@
 
 """The setup script."""
 
-from setuptools import setup, find_packages, find_namespace_packages
+from setuptools import setup, find_packages  # , find_namespace_packages
 import versioneer
 
 with open('README.rst') as readme_file:
