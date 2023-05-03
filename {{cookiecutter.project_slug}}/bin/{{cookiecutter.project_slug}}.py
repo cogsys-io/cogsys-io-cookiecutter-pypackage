@@ -3,6 +3,7 @@
 import argparse
 import sys
 
+
 def main():
     """Console script for {{cookiecutter.project_slug}}."""
     parser = argparse.ArgumentParser()

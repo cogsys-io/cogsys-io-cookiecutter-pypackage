@@ -47,11 +47,13 @@ if __name__ == '__main__':
 
     print("="*77)
     VERSION_TAG = "{{ cookiecutter.project_slug }}-v{{ cookiecutter.version }}"
-    print(f"Adding version tag ({term.bright_blue}{VERSION_TAG}{term.normal}).")
+    print("Adding version tag ",
+          f"({term.bright_blue}{VERSION_TAG}{term.normal}).")
     repo0.create_tag(VERSION_TAG)
 
     print("="*77)
-    print(f"PROJECT_DIRECTORY: {term.bright_blue}{PROJECT_DIRECTORY}{term.normal}")
+    print("PROJECT_DIRECTORY: ",
+          f"{term.bright_blue}{PROJECT_DIRECTORY}{term.normal}")
     print("="*77)
     print(" ".join([
         f"The {term.bold}{{ cookiecutter.project_name }}{term.normal}",

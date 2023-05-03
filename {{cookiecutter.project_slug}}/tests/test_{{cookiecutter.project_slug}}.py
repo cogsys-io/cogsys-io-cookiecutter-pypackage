@@ -4,7 +4,7 @@
 
 import pytest
 
-from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
+from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}  # noqa: F401
 
 
 @pytest.fixture
