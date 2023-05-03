@@ -8,7 +8,7 @@ from . import _version
 __version__ = _version.get_versions()['version']
 __version_dict__ = _version.get_versions()
 # fmt: on
-#
+
 __author__ = """{{ cookiecutter.full_name }}"""
 __email__ = "{{ cookiecutter.email }}"
 
